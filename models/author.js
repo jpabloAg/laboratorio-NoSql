@@ -13,6 +13,10 @@ const AuthorSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  apellido: {
+    type: String,
+    required: false
+  }
 });
 
 AuthorSchema.set('toObject', {

@@ -39,7 +39,7 @@ router.get('/authors20col', async (req, res) => {
  */
 router.get('/sin-apellido', async (req, res) => {
   try {
-    const authors = await Author.find({ apellido: undefined } );
+    const authors = await Author.find({ apellido: undefined }, 'nombre' );
     res.json(authors);
   } catch (err) {
     res.status(500).json({ message: err.message });
